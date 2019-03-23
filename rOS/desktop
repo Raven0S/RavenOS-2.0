@@ -1,4 +1,4 @@
-term.setBackgroundColor(colors.blue)
+term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
 print("Desktop")
