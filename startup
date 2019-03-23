@@ -1,9 +1,9 @@
 os.pullEvent = os.pullEventRaw
 
-un = fs.open("rSettings/username")
+un = fs.open("rSettings/username", "r")
 correctUsername = un.readLine()
 un.close()
-ps = fs.open("rSettings/password")
+ps = fs.open("rSettings/password", "r")
 correctPassword = ps.readLine()
 ps.close()
 
