@@ -18,10 +18,9 @@ term.setCursorPos(1,1)
 centerText("RavenOS", -2)
 centerText("Username:              ", 0)
 centerText("Password:              ", 1)
-
 term.setCursorPos(24,9)
 username = read()
-
 term.setCursorPos(24,10)
 password = read()
+centerText("Install", 3)
 
