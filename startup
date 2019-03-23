@@ -1,3 +1,38 @@
+os.pullEvent = os.pullEventRaw
+
+un = fs.open("rSettings/username")
+correctUsername = un.readLine()
+un.close()
+ps = fs.open("rSettings/password")
+correctPassword = ps.readLine()
+ps.close()
+
+function centerText(txt, offset)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
+  print(txt)
+end
+
+term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
-print("Startup")
+centerText("Login", -2)
+centerText("Username:              ", 0)
+centerText("Password:              ", 1)
+term.setCursorPos(24,9)
+username = read()
+term.setCursorPos(24,10)
+password = read()
+centerText("Login", 3)
+
+while true do 
+  event, button, x, y = os.pullEvent("mouse_click")
+  if button == 1 and y == 12 then
+    if username == correctUsername and password == correctPassword then
+      term.clear()
+      term.setCursorPos(1,1)
+      break
+    end
+  end
+end
