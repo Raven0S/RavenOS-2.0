@@ -19,4 +19,6 @@ centerText("RavenOS", -2)
 centerText("Username:              ", 0)
 centerText("Password:              ", 1)
 
+term.setCursorPos(24,8)
+username = read()
 
