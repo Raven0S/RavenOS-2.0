@@ -14,6 +14,7 @@ end
 
 function installAll()
   fs.makeDir("rSettings")
+  fs.makeDir("rOS")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/temp", "temp")
   fs.copy("temp", "rSettings/username")
   un = fs.open("rSettings/username", "w")
@@ -24,6 +25,7 @@ function installAll()
   pass.writeLine(password)
   pass.close()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/startup", "startup")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rOS/desktop", "rOS/desktop")
   shell.run("set shell.allow_disk_startup false")
   os.reboot()
 end
