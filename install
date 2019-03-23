@@ -9,6 +9,10 @@ function centerText(txt, offset)
   print(txt)
 end
 
+function installAll()
+
+end
+
 fs.makeDir("rSettings")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/temp", "temp")
 
@@ -23,4 +27,10 @@ username = read()
 term.setCursorPos(24,10)
 password = read()
 centerText("Install", 3)
+
+while true do 
+  event, button, x, y = os.pullEvent("mouse_click")
+  if button == 1 and y == 12 then
+    installAll() 
+  end
 
