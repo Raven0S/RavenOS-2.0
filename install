@@ -15,6 +15,8 @@ install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/temp", "te
 term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
-centerText("RavenOS", -1)
+centerText("RavenOS", -2)
+centerText("Username:", 0)
+centerText("Password:", 1)
 
 
