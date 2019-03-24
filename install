@@ -30,6 +30,27 @@ function installAll()
   os.reboot()
 end
 
+print("Are you sure you want to install RavenOS? (Y/n)")
+
+while true do 
+  write("> ")
+  option = read()
+
+  if string.lower(read) == "yes" then
+  
+  elseif string.lower(read) == "y" then
+  
+  elseif string.lower(read) == "no" then
+    print("Installation cancelled!")
+    return
+  elseif string.lower(read) == "n" then
+    print("Installation cancelled!")
+    return
+  else
+    print("Invalid Command")
+  end
+end
+
 term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
