@@ -36,14 +36,14 @@ while true do
   write("> ")
   option = read()
 
-  if string.lower(read) == "yes" then
+  if string.lower(option) == "yes" then
   
-  elseif string.lower(read) == "y" then
+  elseif string.lower(option) == "y" then
   
-  elseif string.lower(read) == "no" then
+  elseif string.lower(option) == "no" then
     print("Installation cancelled!")
     return
-  elseif string.lower(read) == "n" then
+  elseif string.lower(option) == "n" then
     print("Installation cancelled!")
     return
   else
