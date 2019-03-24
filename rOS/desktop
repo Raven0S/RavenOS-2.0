@@ -16,6 +16,6 @@ while true do
   event, button, x, y = os.pullEvent("mouse_click")
   
   if button == 1 and x == 1 and y == 19 then
-    paintutils.drawLine(1, 18, 10, 9, colors.white)
+    paintutils.drawBox(1, 18, 10, 9, colors.white)
   end
 end
