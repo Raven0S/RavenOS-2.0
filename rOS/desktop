@@ -1,9 +1,9 @@
 function drawTaskbar()
-  paintutils.drawLine(1, 19, 51, 19, colors.lightGray)
+  paintutils.drawLine(1, 19, 51, 19, colors.cyan)
   paintutils.drawPixel(1, 19, colors.blue)
 end
 
-term.setBackgroundColor(colors.cyan)
+term.setBackgroundColor(colors.lightGray)
 term.clear()
 term.setCursorPos(1,1)
 
