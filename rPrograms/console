@@ -1,0 +1,13 @@
+term.setTextColor(colors.white)
+term.setBackgroundColor(colors.black)
+term.clear()
+print("RavenOS Console")
+print("")
+
+while true do
+  term.setTextColor(colors.red)
+  write(">> ")
+  term.setTextColor(colors.white)
+  cmd = read()
+  shell.run(cmd)
+end
