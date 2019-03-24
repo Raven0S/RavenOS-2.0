@@ -12,6 +12,13 @@ function centerText(txt, offset)
   print(txt)
 end
 
+function writeText(txt, offset)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
+  write(txt)
+end
+
 function installAll()
   fs.makeDir("rSettings")
   fs.makeDir("rOS")
@@ -59,6 +66,9 @@ term.setCursorPos(1,1)
 centerText("RavenOS", -2)
 centerText("Username:              ", 0)
 centerText("Password:              ", 1)
+term.setTextColor(colors.lightBlue)
+centerText("Install", 3)
+term.setTextColor(colors.white)
 term.setCursorPos(24,9)
 username = read()
 term.setCursorPos(24,10)
