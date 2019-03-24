@@ -73,7 +73,7 @@ term.setCursorPos(24,9)
 username = read()
 term.setCursorPos(24,10)
 password = read()
-centerText("Install", 3)
+writeText("Install", 3)
 
 while true do 
   event, button, x, y = os.pullEvent("mouse_click")
