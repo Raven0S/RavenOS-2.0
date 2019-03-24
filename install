@@ -35,11 +35,11 @@ print("Are you sure you want to install RavenOS? (Y/n)")
 while true do 
   write("> ")
   option = read()
-
+   
   if string.lower(option) == "yes" then
-  
+    break
   elseif string.lower(option) == "y" then
-  
+    break
   elseif string.lower(option) == "no" then
     print("Installation cancelled!")
     return
