@@ -15,7 +15,7 @@ function drawStartMenu()
 end
 
 term.setTextColor(colors.black)
-term.setBackgroundColor(colors.lightGray)
+term.setBackgroundColor(colors.lightBlue)
 term.clear()
 term.setCursorPos(1,1)
 
