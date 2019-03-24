@@ -1,0 +1,11 @@
+term.setTextColor(colors.white)
+term.setBackgroundColor(colors.blue)
+term.clear()
+term.setCursorPos(1,1)
+print("Installer")
+term.setCursorPos(1, 51)
+print("X")
+term.setCursrorPos(1,3)
+print("URL: ")
+print("File Name: ")
+
