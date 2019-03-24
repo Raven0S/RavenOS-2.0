@@ -12,6 +12,8 @@ function drawStartMenu()
   write("Shutdown")
   term.setCursorPos(1, 17)
   write("Reboot")
+  term.setCursorPos(1, 16)
+  write("Install")
 end
 
 term.setTextColor(colors.black)
