@@ -14,17 +14,27 @@ function centerText(txt, offset)
   print(txt)
 end
 
+function writeText(txt, offset)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
+  write(txt)
+end
+
 term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
-centerText("Login", -2)
+centerText("RavenOS Login", -2)
 centerText("Username:              ", 0)
 centerText("Password:              ", 1)
+term.setTextColor(colors.lightBlue)
+centerText("Login", 3)
+term.setTextColor(colors.white)
 term.setCursorPos(24,9)
 username = read()
 term.setCursorPos(24,10)
 password = read("*")
-centerText("Login", 3)
+writeText("Login", 3)
 
 while true do 
   event, button, x, y = os.pullEvent("mouse_click")
