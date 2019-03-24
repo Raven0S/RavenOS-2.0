@@ -5,6 +5,13 @@ function drawTaskbar()
   paintutils.drawPixel(1, 19, colors.blue)
 end
 
+function drawStartMenu()
+  sm = paintutils.loadImage("rPaints/startMenu")
+  paintutils.drawImage(sm, 1, 1)
+  term.setCursorPos(1, 18)
+  write("Shutdown")
+end
+
 term.setTextColor(colors.black)
 term.setBackgroundColor(colors.lightGray)
 term.clear()
@@ -17,8 +24,7 @@ event, button, x, y = os.pullEvent("mouse_click")
   
 if button == 1 and x == 1 and y == 19 then
   paintutils.drawBox(1, 18, 10, 9, colors.white)
-  term.setCursorPos(1, 18)
-  write("Shutdown")
+  drawStartMenu()
   sleep(0.1)
     
   event, button, x, y = os.pullEvent("mouse_click")
