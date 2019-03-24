@@ -23,7 +23,7 @@ centerText("Password:              ", 1)
 term.setCursorPos(24,9)
 username = read()
 term.setCursorPos(24,10)
-password = read()
+password = read("*")
 centerText("Login", 3)
 
 while true do 
