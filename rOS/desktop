@@ -19,6 +19,7 @@ while true do
     paintutils.drawBox(1, 18, 10, 9, colors.white)
     term.setCursorPos(1, 18)
     write("Shutdown")
+    sleep(0.1)
     
     while true do 
       event, button, x, y = os.pullEvent(mouse_click)
