@@ -5,8 +5,17 @@ function drawTaskbar()
   paintutils.drawPixel(1, 19, colors.blue)
 end
 
+term.setTextColor(colors.black)
 term.setBackgroundColor(colors.lightGray)
 term.clear()
 term.setCursorPos(1,1)
 
 drawTaskbar()
+
+while true do 
+  event, button, x, y = os.pullEvent("mouse_click")
+  
+  if button == 1 and x == 1 and y == 19 then
+    paintutils.drawLine(1, 18, 10, 9, colors.white)
+  end
+end
