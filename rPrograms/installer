@@ -6,6 +6,9 @@ print("Installer")
 term.setCursorPos(1, 51)
 print("X")
 term.setCursrorPos(1,3)
-print("URL: ")
-print("File Name: ")
+
+print("Type of installation: ")
+print("1. Disk")
+print("2. Web")
+type = read()
 
