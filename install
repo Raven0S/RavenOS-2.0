@@ -51,12 +51,22 @@ while true do
     break
   elseif string.lower(option) == "y" then
     break
+  elseif string.lower(option) == "ya" then
+    break  
+  elseif string.lower(option) == "yep" then
+    break
   elseif string.lower(option) == "no" then
     print("Installation cancelled!")
     return
   elseif string.lower(option) == "n" then
     print("Installation cancelled!")
     return
+  elseif string.lower(option) == "nah" then
+    print("Installation cancelled!")
+    return
+  elseif string.lower(option) == "nope" then
+    print("Installation cancelled!")
+    return    
   else
     print("Invalid Command")
   end
