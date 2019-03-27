@@ -27,7 +27,7 @@ if button == 1 and x <= 4 and y == 3 then
         f.close()
         
         f = fs.open("rPrograms/userPrograms/"..filename, "w")
-        f.writeAll(data)
+        f.writeLine(data)
         f.close()
         print("Installation complete!")
         sleep(1)
