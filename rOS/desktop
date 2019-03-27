@@ -36,6 +36,8 @@ if button == 1 and x == 1 and y == 19 then
     os.shutdown()
   elseif x >= 1 and x <= 6 and y == 17 then
     os.reboot()
+  elseif x <= 7 and y == 16 then
+    os.reboot()
   else
     shell.run("rOS/desktop")
    end
