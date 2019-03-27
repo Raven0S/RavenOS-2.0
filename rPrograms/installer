@@ -17,7 +17,21 @@ if button == 1 and x <= 4 and y == 3 then
   if fs.exists("disk") then
     if fs.isDir("disk") then
       if fs.exists("disk/fileData") and fs.exists("disk/fileName") then
-      
+        f = fs.open("disk/fileName", "r")
+        filename = f.readAll()
+        fs.copy("temp", "rPrograms/userPrograms/"..filename)
+        f.close()
+        
+        f = fs.open("rPrograms/userPrograms/"..filename, "r")
+        data = f.readAll()
+        f.close()
+        
+        f = fs.open("rPrograms/userPrograms/"..filename, "w")
+        f.writeAll(data)
+        f.close()
+        print("Installation complete!")
+        sleep(1)
+        shell.run("rOS/desktop")
       else
         print("Disk data files not found!")
         sleep(1)
