@@ -22,6 +22,8 @@ elseif button == 1 and x <= 3 and y == 4 then
   fn = read()
   shell.run("wget "..url.." "..fn)
   shell.run("rOS/desktop")
+elseif button == 1 and x == 51 and y == 1 then
+  shell.run("rOS/desktop")
 else
   shell.run("rPrograms/installer")
 end
