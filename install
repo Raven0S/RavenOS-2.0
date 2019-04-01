@@ -39,6 +39,7 @@ function installAll()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/console", "rPrograms/console")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPaints/startMenu", "rPaints/startMenu")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/installer", "rPrograms/installer")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPaints/icon", "rPaints/icon")
   shell.run("set shell.allow_disk_startup false")
   os.reboot()
 end
