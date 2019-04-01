@@ -27,7 +27,7 @@ term.clear()
 term.setCursorPos(1,1)
 
 drawTaskbar()
-drawIcons
+drawIcons()
  
 event, button, x, y = os.pullEvent("mouse_click")
   
