@@ -3,4 +3,12 @@ os.pullEvent = os.pullEventRaw
 os.loadAPI("rApis/check")
 os.loadAPI("rApis/text")
 
+term.clear()
+term.setCursorPos(1,1)
+term.setTextColor(colors.lime)
+write("Notice: ")
+term.setTextColor(colors.white)
+write("If you find any bugs or glitches please report it to the developers of RavenOS")
+sleep(2)
+
 shell.run("rOS/login")
