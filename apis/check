@@ -8,6 +8,6 @@ function check(func)
     term.setCursorPos(1,1)
     text.center("Oh no! We've had an error!", 1)
     text.center(err, 0)
-    text.center("Please report this error to the developer!")
+    text.center("Please report this error to the developer!", -1)
   end
 end
