@@ -3,6 +3,8 @@ os.pullEvent = os.pullEventRaw
 function drawIcons()
   icon = paintutils.loadImage("rPaints/icon")
   paintutils.drawImage(icon, 2, 2)
+  term.setCursorPos(2,2)
+  print(">_")
 end
 
 function drawTaskbar()
