@@ -1,5 +1,10 @@
 os.pullEvent = os.pullEventRaw
 
+function drawIcons()
+  icon = paintutils.loadImage("rPaints/icon")
+  paintutils.drawImage(icon, 2, 2)
+end
+
 function drawTaskbar()
   paintutils.drawLine(1, 19, 51, 19, colors.cyan)
   paintutils.drawPixel(1, 19, colors.blue)
