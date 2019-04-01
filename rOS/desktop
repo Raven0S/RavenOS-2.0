@@ -23,6 +23,11 @@ function drawStartMenu()
   write("Install")
 end
 
+function open(program)
+  multishell.launch({}, program)
+  shell.run("rOS/desktop")
+end
+
 term.setTextColor(colors.black)
 term.setBackgroundColor(colors.lightBlue)
 term.clear()
