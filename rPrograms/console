@@ -1,5 +1,3 @@
-function all()
-
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.black)
 term.clear()
@@ -20,6 +18,3 @@ while true do
   end
 end
 
-end
-
-check.check(all)
