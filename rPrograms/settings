@@ -19,3 +19,31 @@ else
   write("Use Admin [ ]")
 end
 
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+
+  if button == 1 then
+    if x == 51 and y == 1 then
+      shell.run("rOS/desktop")
+      break
+    elseif x == 12 and y == 4 then
+      f = fs.open("rSettings/useAdmin", "r")
+      useAdmin = f.readLine()
+      f.close()
+    
+      if useAdmin == "true" then
+        f = fs.open("rSettings/useAdmin", "w")
+        f.writeLine("false")
+        f.close()
+        term.setCursorPos(1,4)
+        write("Use Admin [ ]")
+      else
+        f = fs.open("rSettings/useAdmin", "w")
+        f.writeLine("true")
+        f.close()
+        term.setCursorPos(1,4)
+        write("Use Admin [X]")
+      end
+    end
+  end
+end
