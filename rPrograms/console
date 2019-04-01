@@ -10,5 +10,9 @@ while true do
   write(">> ")
   term.setTextColor(colors.white)
   cmd = read()
-  shell.run(cmd)
+  
+  if cmd == "desktop" then
+    shell.run("rOS/desktop")
+  else
+    shell.run(cmd)
 end
