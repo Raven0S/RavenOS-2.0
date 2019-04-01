@@ -1,3 +1,5 @@
+function all()
+
 os.pullEvent = os.pullEventRaw
 
 function drawIcons()
@@ -61,3 +63,6 @@ else
   shell.run("rOS/desktop")
 end
 
+end
+
+check.check(all)
