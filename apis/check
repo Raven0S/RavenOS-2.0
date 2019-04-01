@@ -6,6 +6,8 @@ function check(func)
     term.setBackgroundColor(colors.blue)
     term.clear()
     term.setCursorPos(1,1)
-    print("Error!")
+    text.center("Oh no! We've had an error!", 1)
+    text.center(val, 0)
+    text.center("Please report this error to the developer!")
   end
 end
