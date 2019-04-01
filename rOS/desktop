@@ -56,7 +56,7 @@ if button == 1 and x == 1 and y == 19 then
     os.reboot()
   elseif x <= 7 and y == 16 then
     shell.run("rPrograms/installer")
-  elseif x <= 8 and y == 16 then
+  elseif x <= 8 and y == 15 then
     shell.run("rPrograms/settings")
   else
     shell.run("rOS/desktop")
