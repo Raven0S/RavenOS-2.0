@@ -1,3 +1,7 @@
+f = fs.open("rSettings/useAdmin", "r")
+useAdmin = f.readLine()
+f.close()
+
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.cyan)
 print("Settings|")
@@ -5,5 +9,11 @@ print("---------")
 term.setCursorPos(51, 1)
 print("X")
 
-term.setCursorPos(1,4)
-print("Use Admin Account [ ]")
+if useAdmin == "true" then
+  term.setCursorPos(1,4)
+  write("Use Admin [X]")
+else
+  term.setCursorPos(1,4)
+  write("Use Admin [ ]")
+end
+
