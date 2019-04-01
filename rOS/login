@@ -43,13 +43,22 @@ while true do
       shell.run("rOS/desktop")
       break
     elseif username == "admin" and password == "admin" then
-      term.setBackgroundColor(colors.black)
-      term.clear()
-      term.setCursorPos(1,1)
-      print("RavenOS Admin Mode")
-      break 
+      f = fs.open("rSettings/useAdmin", "r")
+      useAdmin = f.readLine()
+      f.close()
+      if useAdmin == "true" then
+        term.setBackgroundColor(colors.black)
+        term.clear()
+        term.setCursorPos(1,1)
+        print("RavenOS Admin Mode")
+        break 
+      else
+        break
+        shell.run("rOS/login")
+      end
     else
-      os.reboot()
+      break
+      shell.run("rOS/login)
     end
   end
 end
