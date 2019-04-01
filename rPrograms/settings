@@ -4,3 +4,6 @@ print("Settings|")
 print("---------")
 term.setCursorPos(51, 1)
 print("X")
+
+term.setCursorPos(1,4)
+print("Use Admin Account [ ]")
