@@ -1,5 +1,8 @@
 os.pullEvent = os.pullEventRaw
 
+os.loadAPI(rApis/check)
+os.loadAPI("rApis/text")
+
 un = fs.open("rSettings/username", "r")
 correctUsername = un.readLine()
 un.close()
