@@ -1,3 +1,5 @@
+function all()
+
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.black)
 term.clear()
@@ -17,3 +19,7 @@ while true do
     shell.run(cmd)
   end
 end
+
+end
+
+check.check(all)
