@@ -1,0 +1,6 @@
+term.setTextColor(colors.white)
+term.setBackgroundColor(colors.cyan)
+print("Settings|")
+print("---------")
+term.setCursorPos(51, 1)
+print("X")
