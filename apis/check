@@ -1,0 +1,11 @@
+function check(func)
+  ok, err = pcall(func)
+  
+  if not ok then
+    term.setTextColor(colors.white)
+    term.setBackgroundColor(colors.blue)
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Error!")
+  end
+end
