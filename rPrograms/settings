@@ -48,8 +48,11 @@ while true do
         write("Use Admin [X]")
       end
     elseif x <= 24 and y == 6 then
+      w, h = term.getSize()
       term.clear()
       term.setCursorPos(1,1)
+      text.center("New Username: ", 0)
+      text.center("New Password: ", 1)
     end
   end
 end
