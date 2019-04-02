@@ -77,11 +77,11 @@ while true do
       if fs.exists("rSettings/doNotLogin") then
         fs.delete("rSettings/doNotLogin")
         term.setCursorPos(1,8)
-        write("Use Login [ ]")
+        write("Use Login [X]")
       else
         fs.copy("temp", "rSettings/doNotLogin")
         term.setCursorPos(1,8)
-        write("Use Login [X]")
+        write("Use Login [ ]")
       end
     end
   end
