@@ -24,10 +24,10 @@ write("Change Username/Password")
 
 if fs.exists("rSettings/doNotLogin") then
   term.setCursorPos(1,8)
-  write("Use Login [X]")
+  write("Use Login [ ]")
 else
   term.setCursorPos(1,8)
-  write("Use Login [ ]")
+  write("Use Login [X]")
 end
 
 while true do
