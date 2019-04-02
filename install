@@ -120,7 +120,7 @@ while true do
       password = read()
       installAll()
     elseif y == 11 then
-      fs.copy("temp", "doNotLogin")
+      fs.copy("temp", "rSettings/doNotLogin")
       installAll()
     end
   end
