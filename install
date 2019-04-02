@@ -1,36 +1,40 @@
 totalFiles = 0
-
+w, h = term.getSize()
+ 
 if not term.isColor() then
   term.clear()
   term.setCursorPos(1,1)
   print("Installation failed: Must have an advanced computer")
   return
 end
-
-function install(addr, fn) 
+ 
+function install(addr, fn)
   term.clear()
   term.setCursorPos(1,19)
-  print("Total Files: "..totalFiles)
+  write("Total Files: "..totalFiles)
   term.setCursorPos(1,1)
   print("Installing..."..fn)
   shell.run("wget "..addr.." "..fn)
   totalFiles = totalFiles + 1
 end
-
+ 
 function centerText(txt, offset)
-  w, h = term.getSize()
-  
   term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
   print(txt)
 end
-
+ 
+function topText(txt)
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), 1)
+  print(txt)
+end
+ 
 function writeText(txt, offset)
   w, h = term.getSize()
-  
+ 
   term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
   write(txt)
 end
-
+ 
 function installAll()
   fs.makeDir("rSettings")
   fs.makeDir("rOS")
@@ -38,7 +42,6 @@ function installAll()
   fs.makeDir("rPaints")
   fs.makeDir("rPrograms/userPrograms")
   fs.makeDir("rApis")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/temp", "temp")
   fs.copy("temp", "rSettings/username")
   un = fs.open("rSettings/username", "w")
   un.writeLine(username)
@@ -61,10 +64,10 @@ function installAll()
   shell.run("set shell.allow_disk_startup false")
   os.reboot()
 end
-
+ 
 print("Are you sure you want to install RavenOS? (Y/n)")
-
-while true do 
+ 
+while true do
   write("> ")
   option = read()
    
@@ -92,13 +95,33 @@ while true do
     print("Invalid Command")
   end
 end
-
+ 
+install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/temp", "temp")
+term.setTextColor(colors.white)
+term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
-write("Username: ")
-username = read()
-write("Password: ")
-password = read()
-print("Press any key to install...")
-read()
-installAll()
+topText("===[ RavenOS Installer ]===")
+centerText("Create Account", 0)
+centerText("Skip", 2)
+ 
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+ 
+  if button == 1 then
+    if y == 9 then
+      term.clear()
+      topText("===[ RavenOS Installer ]===")
+      centerText("Username: ", -1)
+      centerText("Password: ", 1)
+      term.setCursorPos(30, 8)
+      username = read()
+      term.setCursorPos(30, 10)
+      password = read()
+      installAll()
+    elseif y == 11 then
+      fs.copy("temp", "doNotLogin")
+      installAll()
+    end
+  end
+end
