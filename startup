@@ -11,7 +11,7 @@ term.setTextColor(colors.white)
 write("If you find any bugs or glitches please report it to the developers of RavenOS")
 sleep(2)
 
-if fs.exists("doNotLogin") then
+if fs.exists("rSettings/doNotLogin") then
   shell.run("rOS/desktop")
 else
   shell.run("rOS/login")
