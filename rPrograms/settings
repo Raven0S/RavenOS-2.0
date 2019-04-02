@@ -22,6 +22,14 @@ end
 term.setCursorPos(1,6)
 write("Change Username/Password")
 
+if fs.exists("rSettings/doNotLogin") then
+  term.setCursorPos(1,8)
+  write("Use Login [X]")
+else
+  term.setCursorPos(1,8)
+  write("Use Login [ ]")
+end
+
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
 
@@ -65,6 +73,16 @@ while true do
       f.close()
       shell.run("rPrograms/settings")
       break
+    elseif x == 12 and y == 8 then
+      if fs.exists("rSettings/doNotLogin") then
+        fs.delete("rSettings/doNotLogin")
+        term.setCursorPos(1,8)
+        write("Use Login [X]")
+      else
+        fs.copy("temp", "rSettings/doNotLogin")
+        term.setCursorPos(1,8)
+        write("Use Login [ ]")
+      end
     end
   end
 end
