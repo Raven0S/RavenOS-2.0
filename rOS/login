@@ -53,10 +53,12 @@ while true do
         print("RavenOS Admin Mode")
         break 
       else
-        os.reboot()
+        shell.run("rOS/login")
+        break
       end
     else
-      os.reboot()
+      shell.run("rOS/login")
+      break
     end
   end
 end
