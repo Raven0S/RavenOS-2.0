@@ -9,12 +9,12 @@ end
 
 function install(addr, fn) 
   term.clear()
+  term.setCursorPos(1,19)
+  print("Total Files: "..totalFiles)
   term.setCursorPos(1,1)
   print("Installing..."..fn)
   shell.run("wget "..addr.." "..fn)
   totalFiles = totalFiles + 1
-  term.setCursorPos(1,19)
-  print("Total Files: "..totalFiles)
 end
 
 function centerText(txt, offset)
