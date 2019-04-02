@@ -54,6 +54,9 @@ while true do
       text.center("New Username: ", 0)
       text.center("New Password: ", 1)
       term.setCursorPos(32, 9)
+      newusername = read()
+      term.setCursorPos(32, 10)
+      newpassword = read()
     end
   end
 end
