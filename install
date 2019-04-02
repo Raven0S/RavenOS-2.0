@@ -114,9 +114,9 @@ while true do
       topText("===[ RavenOS Installer ]===")
       centerText("Username:              ", -1)
       centerText("Password:              ", 1)
-      term.setCursorPos(30, 8)
+      term.setCursorPos(24, 8)
       username = read()
-      term.setCursorPos(30, 10)
+      term.setCursorPos(24, 10)
       password = read()
       installAll()
     elseif y == 11 then
