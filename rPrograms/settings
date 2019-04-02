@@ -1,7 +1,7 @@
 f = fs.open("rSettings/useAdmin", "r")
 useAdmin = f.readLine()
 f.close()
-
+ 
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.cyan)
 term.clear()
@@ -10,52 +10,60 @@ print("Settings|")
 print("---------")
 term.setCursorPos(51, 1)
 print("X")
-
-if useAdmin == "true" then
-  term.setCursorPos(1,4)
-  write("Use Admin [X]")
-else
-  term.setCursorPos(1,4)
-  write("Use Admin [ ]")
-end
-
-term.setCursorPos(1,6)
-write("Change Username/Password")
-
+ 
 if fs.exists("rSettings/doNotLogin") then
-  term.setCursorPos(1,8)
+  term.setCursorPos(1,6)
   write("Use Login [ ]")
 else
-  term.setCursorPos(1,8)
+  term.setCursorPos(1,6)
   write("Use Login [X]")
 end
-
+ 
+if useAdmin == "true" then
+  term.setCursorPos(1,8)
+  write("Use Admin [X]")
+else
+  term.setCursorPos(1,8)
+  write("Use Admin [ ]")
+end
+ 
+term.setCursorPos(1,4)
+write("Change Username/Password")
+ 
+if useAdmin == "true" then
+  term.setCursorPos(1,8)
+  write("Use Admin [X]")
+else
+  term.setCursorPos(1,8)
+  write("Use Admin [ ]")
+end
+ 
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
-
+ 
   if button == 1 then
     if x == 51 and y == 1 then
       shell.run("rOS/desktop")
       break
-    elseif x == 12 and y == 4 then
+    elseif x == 12 and y == 8 then
       f = fs.open("rSettings/useAdmin", "r")
       useAdmin = f.readLine()
       f.close()
-    
+   
       if useAdmin == "true" then
         f = fs.open("rSettings/useAdmin", "w")
         f.writeLine("false")
         f.close()
-        term.setCursorPos(1,4)
+        term.setCursorPos(1,8)
         write("Use Admin [ ]")
       else
         f = fs.open("rSettings/useAdmin", "w")
         f.writeLine("true")
         f.close()
-        term.setCursorPos(1,4)
+        term.setCursorPos(1,8)
         write("Use Admin [X]")
       end
-    elseif x <= 24 and y == 6 then
+    elseif x <= 24 and y == 4 then
       w, h = term.getSize()
       term.clear()
       term.setCursorPos(1,1)
@@ -75,14 +83,14 @@ while true do
       f.close()
       shell.run("rPrograms/settings")
       break
-    elseif x == 12 and y == 8 then
+    elseif x == 12 and y == 6 then
       if fs.exists("rSettings/doNotLogin") then
         fs.delete("rSettings/doNotLogin")
-        term.setCursorPos(1,8)
+        term.setCursorPos(1,6)
         write("Use Login [X]")
       else
         fs.copy("temp", "rSettings/doNotLogin")
-        term.setCursorPos(1,8)
+        term.setCursorPos(1,6)
         write("Use Login [ ]")
       end
     end
