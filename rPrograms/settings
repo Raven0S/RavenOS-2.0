@@ -57,6 +57,14 @@ while true do
       newusername = read()
       term.setCursorPos(32, 10)
       newpassword = read()
+      f = fs.open("rSettings/username", "w")
+      f.writeLine(newusername)
+      f.close()
+      f = fs.open("rSettings/password", "w")
+      f.writeLine(newpassword)
+      f.close()
+      shell.run("rPrograms/settings")
+      break
     end
   end
 end
