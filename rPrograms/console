@@ -3,6 +3,7 @@ term.setBackgroundColor(colors.black)
 term.clear()
 term.setCursorPos(1,1)
 print("RavenOS Console")
+print("Type 'desktop' to exit console")
 print("")
 
 while true do
