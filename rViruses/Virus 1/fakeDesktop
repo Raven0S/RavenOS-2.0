@@ -1,0 +1,5 @@
+function rekt()
+  error("I forgot")
+end
+
+check.check(rekt)
