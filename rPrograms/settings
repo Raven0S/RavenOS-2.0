@@ -19,6 +19,9 @@ else
   write("Use Admin [ ]")
 end
 
+term.setCursorPos(1,6)
+write("Change Username/Password")
+
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
 
@@ -44,6 +47,9 @@ while true do
         term.setCursorPos(1,4)
         write("Use Admin [X]")
       end
+    elseif x <= 24 and y == 6 then
+      term.clear()
+      term.setCursorPos(1,1)
     end
   end
 end
