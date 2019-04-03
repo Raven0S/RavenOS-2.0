@@ -2,3 +2,17 @@ term.clear()
 term.setCursorPos(1,1)
 print("Settings|")
 print("---------")
+
+term.setCursorPos(1, 4)
+print("Login")
+
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+
+  if button == 1 then
+    if x <= 5 and y == 4 then
+      shell.run("rPrograms/settingsLogin")
+      break
+    end
+  end
+end
