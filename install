@@ -14,7 +14,10 @@ function install(addr, fn)
   write("Total Files: "..totalFiles)
   term.setCursorPos(1,1)
   print("Installing..."..fn)
-  shell.run("wget "..addr.." "..fn)
+  stuff = http.get(addr).readAll()
+  f = fs.open(fn, "w")
+  f.write(stuff)
+  f.close()
   totalFiles = totalFiles + 1
 end
  
