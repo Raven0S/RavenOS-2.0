@@ -14,6 +14,8 @@ paintutils.drawPixel(18, 4, colors.green)
 paintutils.drawPixel(19, 4, colors.yellow)
 paintutils.drawPixel(20, 4, colors.orange)
 paintutils.drawPixel(21, 4, colors.red)
+term.setCursorPos(23, 4)
+write("Require Reboot*")
 
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
