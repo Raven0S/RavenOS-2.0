@@ -12,6 +12,7 @@ function drawIcons()
   term.setTextColor(colors.white)
   write("_")
   term.setCursorPos(4,2)
+  term.setTextColor(colors.yellow)
   write("LUA")
   term.setTextColor(colors.black)
 end
