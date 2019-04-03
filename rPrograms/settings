@@ -8,8 +8,11 @@ print("---------")
 term.setCursorPos(51,1)
 write("X")
 
-term.setCursorPos(1, 4)
-print("Login")
+term.setCursorPos(1,4)
+write("Login")
+
+term.setCursorPos(1,6)
+write("System")
 
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
@@ -20,6 +23,9 @@ while true do
       break
     elseif x <= 5 and y == 4 then
       shell.run("rPrograms/settingsLogin")
+      break
+    elseif x <= 6 and y == 6 then
+      shell.run("rPrograms/settingsSystem")
       break
     end
   end
