@@ -9,7 +9,7 @@ term.setCursorPos(1,1)
 print("Settings|")
 print("---------")
 term.setCursorPos(51, 1)
-print("X")
+print("<")
  
 if fs.exists("rSettings/doNotLogin") then
   term.setCursorPos(1,6)
@@ -43,7 +43,7 @@ while true do
  
   if button == 1 then
     if x == 51 and y == 1 then
-      shell.run("rOS/desktop")
+      shell.run("rPrograms/settings")
       break
     elseif x == 12 and y == 8 then
       f = fs.open("rSettings/useAdmin", "r")
