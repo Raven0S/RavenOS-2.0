@@ -1,5 +1,5 @@
 term.setTextColor(colors.white)
-term.setBackgroundColor(colors.cyan)
+term.setBackgroundColor(system.color)
 term.clear()
 term.setCursorPos(1,1)
 print("Installer")
