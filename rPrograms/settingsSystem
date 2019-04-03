@@ -22,33 +22,38 @@ while true do
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.cyan")
         f.close()
+        shell.run("rPrograms/settingsSystem")
       elseif x == 16 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.blue")
         f.close()
+        shell.run("rPrograms/settingsSystem")
       elseif x == 17 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.lime")
         f.close()
+        shell.run("rPrograms/settingsSystem")
      elseif x == 18 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.green")
         f.close()
+        shell.run("rPrograms/settingsSystem")
      elseif x == 19 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.yellow")
         f.close()
+        shell.run("rPrograms/settingsSystem")
      elseif x == 20 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.orange")
         f.close()
+        shell.run("rPrograms/settingsSystem")
      elseif x == 21 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.red")
         f.close()
+        shell.run("rPrograms/settingsSystem")
     end
-    
-    shell.run("rPrograms/settingsSystem")
   elseif y == 1 and x == 51 then
     shell.run("rPrograms/settings")
     break
