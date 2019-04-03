@@ -21,6 +21,7 @@ function writeText(txt, offset)
   write(txt)
 end
 
+term.setTextColor(colors.white)
 term.setBackgroundColor(system.color)
 term.clear()
 term.setCursorPos(1,1)
