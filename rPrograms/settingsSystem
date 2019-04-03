@@ -18,15 +18,15 @@ while true do
   event, button, x, y = os.pullEvent("mouse_click")
     if y == 4 then
       if x == 15 then
-        f = fs.open("rSettings/system")
+        f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.cyan")
         f.close()
       elseif x == 16 then
-        f = fs.open("rSettings/system")
+        f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.blue")
         f.close()
       elseif x == 17 then
-        f = fs.open("rSettings/system")
+        f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.lime")
         f.close()
     end
