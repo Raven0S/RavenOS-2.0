@@ -2,6 +2,7 @@ os.pullEvent = os.pullEventRaw
 
 os.loadAPI("rApis/check")
 os.loadAPI("rApis/text")
+os.loadAPI("rSettings/system")
 
 term.clear()
 term.setCursorPos(1,1)
