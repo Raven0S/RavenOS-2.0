@@ -13,3 +13,22 @@ paintutils.drawPixel(18, 4, colors.green)
 paintutils.drawPixel(19, 4, colors.yellow)
 paintutils.drawPixel(20, 4, colors.orange)
 paintutils.drawPixel(21, 4, colors.red)
+
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+    if y == 4 then
+      if x == 15 then
+        f = fs.open("rSettings/system")
+        f.writeLine("color = colors.cyan")
+        f.close()
+      elseif x == 16 then
+        f = fs.open("rSettings/system")
+        f.writeLine("color = colors.blue")
+        f.close()
+      elseif x == 17 then
+        f = fs.open("rSettings/system")
+        f.writeLine("color = colors.lime")
+        f.close()
+    end
+  end
+end
