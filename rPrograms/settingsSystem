@@ -1,1 +1,12 @@
-
+term.clear()
+term.setCursorPos(1,1)
+print("System Settings|")
+print("----------------")
+term.setCursorPos(51,1)
+write("X")
+term.setCursorPos(1,4)
+print("System Color: ")
+paintutils.drawPixel(15, 4, colors.cyan)
+paintutils.drawPixel(16, 4, colors.blue)
+paintutils.drawPixel(17, 4, colors.lime)
+paintutils.drawPixel(18, 4, colors.green)
