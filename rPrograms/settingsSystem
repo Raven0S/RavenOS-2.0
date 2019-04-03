@@ -3,7 +3,7 @@ term.setCursorPos(1,1)
 print("System Settings|")
 print("----------------")
 term.setCursorPos(51,1)
-write("X")
+write("<")
 term.setCursorPos(1,4)
 print("System Color: ")
 paintutils.drawPixel(15, 4, colors.cyan)
@@ -29,6 +29,25 @@ while true do
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.lime")
         f.close()
+     elseif x == 17 then
+        f = fs.open("rSettings/system", "w")
+        f.writeLine("color = colors.green")
+        f.close()
+     elseif x == 17 then
+        f = fs.open("rSettings/system", "w")
+        f.writeLine("color = colors.yellow")
+        f.close()
+     elseif x == 17 then
+        f = fs.open("rSettings/system", "w")
+        f.writeLine("color = colors.orange")
+        f.close()
+     elseif x == 17 then
+        f = fs.open("rSettings/system", "w")
+        f.writeLine("color = colors.red")
+        f.close()
     end
+  elseif y == 1 and x == 51 then
+    shell.run("rPrograms/settings")
+    break
   end
 end
