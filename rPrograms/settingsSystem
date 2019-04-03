@@ -1,3 +1,4 @@
+term.setBackgroundColor(system.color)
 term.clear()
 term.setCursorPos(1,1)
 print("System Settings|")
@@ -46,6 +47,8 @@ while true do
         f.writeLine("color = colors.red")
         f.close()
     end
+    
+    shell.run("rPrograms/settingsSystem")
   elseif y == 1 and x == 51 then
     shell.run("rPrograms/settings")
     break
