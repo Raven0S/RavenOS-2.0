@@ -5,11 +5,14 @@ os.pullEvent = os.pullEventRaw
 function drawIcons()
   consoleIcon = paintutils.loadImage("rPaints/icons/consoleIcon")
   paintutils.drawImage(consoleIcon, 2, 2)
+  paintutils.drawImage(consoleIcon, 4, 2)
   term.setCursorPos(2,2)
   term.setTextColor(colors.red)
   write(">")
   term.setTextColor(colors.white)
   write("_")
+  term.setCursorPos(4,2)
+  write("LUA")
   term.setTextColor(colors.black)
 end
 
