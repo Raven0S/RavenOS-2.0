@@ -22,7 +22,7 @@ function drawStartMenu()
   term.setCursorPos(1, 17)
   write("Reboot")
   term.setCursorPos(1, 16)
-  write("Install")
+  write("Logout")
   term.setCursorPos(1, 15)
   write("Settings")
 end
@@ -55,7 +55,7 @@ if button == 1 and x == 1 and y == 19 then
   elseif x >= 1 and x <= 6 and y == 17 then
     os.reboot()
   elseif x <= 7 and y == 16 then
-    shell.run("rPrograms/installer")
+    shell.run("rOS/login")
   elseif x <= 8 and y == 15 then
     shell.run("rPrograms/settings")
   else
