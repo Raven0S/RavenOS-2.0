@@ -30,19 +30,19 @@ while true do
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.lime")
         f.close()
-     elseif x == 17 then
+     elseif x == 18 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.green")
         f.close()
-     elseif x == 17 then
+     elseif x == 19 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.yellow")
         f.close()
-     elseif x == 17 then
+     elseif x == 20 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.orange")
         f.close()
-     elseif x == 17 then
+     elseif x == 21 then
         f = fs.open("rSettings/system", "w")
         f.writeLine("color = colors.red")
         f.close()
