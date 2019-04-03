@@ -3,10 +3,14 @@ function all()
 os.pullEvent = os.pullEventRaw
 
 function drawIcons()
-  icon = paintutils.loadImage("rPaints/icon")
-  paintutils.drawImage(icon, 2, 2)
+  consoleIcon = paintutils.loadImage("rPaints/icons/consoleIcon")
+  paintutils.drawImage(consoleIcon, 2, 2)
   term.setCursorPos(2,2)
-  print(">_")
+  term.setTextColor(colors.red)
+  write(">")
+  term.setTextColor(colors.white)
+  write("_")
+  term.setTextColor(colors.black)
 end
 
 function drawTaskbar()
