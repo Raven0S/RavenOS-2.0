@@ -14,5 +14,6 @@ function check(func)
     f.close()
     sleep(5)
     os.reboot()
+    return
   end
 end
