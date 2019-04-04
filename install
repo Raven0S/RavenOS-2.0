@@ -56,7 +56,7 @@ function installAll()
   pass = fs.open("rSettings/password", "w")
   pass.writeLine(password)
   pass.close()
-  type = "OS"
+  type = "system"
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/startup", "startup")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rOS/desktop", "rOS/desktop")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rOS/login", "rOS/login")
