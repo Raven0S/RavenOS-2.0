@@ -1,4 +1,4 @@
-f = fs.open("rSettings/username")
+f = fs.open("rSettings/username", "r")
 un = f.readLine()
 f.close()
 
