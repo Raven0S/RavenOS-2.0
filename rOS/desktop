@@ -18,7 +18,7 @@ function drawIcons()
 end
 
 function drawTaskbar()
-  paintutils.drawLine(1, 19, 51, 19, colors.cyan)
+  paintutils.drawLine(1, 19, 51, 19, system.color)
   paintutils.drawPixel(1, 19, startMenu.color)
 end
 
