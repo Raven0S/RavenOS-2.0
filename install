@@ -10,7 +10,7 @@ end
  
 function install(addr, fn)
   term.clear()
-  writeText("Installing files...")
+  writeText("Installing files...", 0)
   term.setCursorPos(1,19)
   write("Total Files: "..totalFiles)
   term.setCursorPos(1,1)
