@@ -12,6 +12,7 @@ function check(func)
     f = fs.open("crashLog", "a")
     f.writeLine(err)
     f.close()
+    return
     sleep(5)
     os.reboot()
   end
