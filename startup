@@ -14,7 +14,7 @@ write("If you find any bugs or glitches please report it to the developers of Ra
 sleep(2)
 
 if fs.exists("rSettings/doNotLogin") then
-  shell.run("rOS/desktop")
+  shell.run("rOS/intro")
 else
   shell.run("rOS/login")
 end
