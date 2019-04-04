@@ -4,6 +4,6 @@ f.close()
 
 term.clear()
 term.setCursorPos(1,1)
-text.center("Welcome, "..un)
+text.center("Welcome, "..un, 0)
 sleep(2)
 shell.run("rOS/desktop")
