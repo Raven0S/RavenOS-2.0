@@ -41,7 +41,7 @@ while true do
   event, button, x, y = os.pullEvent("mouse_click")
   if button == 1 and y == 12 then
     if username == correctUsername and password == correctPassword then
-      shell.run("rOS/desktop")
+      shell.run("rOS/intro")
       break
     elseif username == "admin" and password == "admin" then
       f = fs.open("rSettings/useAdmin", "r")
