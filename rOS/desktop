@@ -14,7 +14,7 @@ function drawIcons()
   term.setCursorPos(7,2)
   term.setTextColor(colors.yellow)
   write("LUA")
-  term.setTextColor(colors.black)
+  term.setTextColor(colors.white)
 end
 
 function drawTaskbar()
