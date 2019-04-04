@@ -19,11 +19,11 @@ end
 
 function drawTaskbar()
   paintutils.drawLine(1, 19, 51, 19, colors.cyan)
-  paintutils.drawPixel(1, 19, colors.blue)
+  paintutils.drawPixel(1, 19, startMenu.color)
 end
 
 function drawStartMenu()
-  paintutils.drawFilledBox(1, 18, 9, 12, colors.blue)
+  paintutils.drawFilledBox(1, 18, 9, 12, startMenu.color)
   term.setCursorPos(1, 18)
   write("Shutdown")
   term.setCursorPos(1, 17)
