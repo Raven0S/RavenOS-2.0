@@ -39,6 +39,9 @@ function writeText(txt, offset)
 end
  
 function installAll()
+  w, h = term.getSize()
+  term.setCursorPos(w / 2 - math.floor(string.len("Installing files...") / 2), h / 2)
+  write("Installing files...")
   fs.makeDir("rSettings")
   fs.makeDir("rOS")
   fs.makeDir("rPrograms")
