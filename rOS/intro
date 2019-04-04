@@ -2,7 +2,7 @@ f = fs.open("rSettings/username", "r")
 un = f.readLine()
 f.close()
 
-if un ~= nil then
+if un ~= "" then
   term.setBackgroundColor(system.color)
   term.clear()
   term.setCursorPos(1,1)
