@@ -6,7 +6,7 @@ print("----------------")
 term.setCursorPos(51,1)
 write("<")
 term.setCursorPos(1,4)
-print("System Color: ")
+write("System Color: ")
 paintutils.drawPixel(15, 4, colors.cyan)
 paintutils.drawPixel(16, 4, colors.blue)
 paintutils.drawPixel(17, 4, colors.lime)
@@ -15,6 +15,18 @@ paintutils.drawPixel(19, 4, colors.yellow)
 paintutils.drawPixel(20, 4, colors.orange)
 paintutils.drawPixel(21, 4, colors.red)
 term.setCursorPos(23, 4)
+write("Require Reboot*")
+
+term.setCursorPos(1,6)
+write("Menu Color: ")
+paintutils.drawPixel(15, 6, colors.cyan)
+paintutils.drawPixel(16, 6, colors.blue)
+paintutils.drawPixel(17, 6, colors.lime)
+paintutils.drawPixel(18, 6, colors.green)
+paintutils.drawPixel(19, 6, colors.yellow)
+paintutils.drawPixel(20, 6, colors.orange)
+paintutils.drawPixel(21, 6, colors.red)
+term.setCursorPos(23, 6)
 write("Require Reboot*")
 
 while true do
@@ -46,6 +58,36 @@ while true do
         f.close()
      elseif x == 21 then
         f = fs.open("rSettings/system", "w")
+        f.writeLine("color = colors.red")
+        f.close()
+    end
+  elseif y == 6 then
+      if x == 15 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.cyan")
+        f.close()
+      elseif x == 16 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.blue")
+        f.close()
+      elseif x == 17 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.lime")
+        f.close()
+     elseif x == 18 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.green")
+        f.close()
+     elseif x == 19 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.yellow")
+        f.close()
+     elseif x == 20 then
+        f = fs.open("rSettings/startMenu", "w")
+        f.writeLine("color = colors.orange")
+        f.close()
+     elseif x == 21 then
+        f = fs.open("rSettings/startMenu", "w")
         f.writeLine("color = colors.red")
         f.close()
     end
