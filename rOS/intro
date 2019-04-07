@@ -13,7 +13,7 @@ else
   term.setBackgroundColor(system.color)
   term.clear()
   term.setCursorPos(1,1)
-  text.center("Welcome to RavenOS!")
+  text.center("Welcome to RavenOS!", 0)
   sleep(2)
   shell.run("rOS/desktop")
 end
