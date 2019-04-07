@@ -31,4 +31,6 @@ elseif key == keys.f2 then
   term.clear()
   term.setCursorPos(1,1)
   print("RavenOS Safe Mode")
+else
+  os.reboot()
 end
