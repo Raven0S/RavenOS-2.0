@@ -1,20 +1,32 @@
 os.pullEvent = os.pullEventRaw
 
-os.loadAPI("rApis/check")
-os.loadAPI("rApis/text")
-os.loadAPI("rSettings/system")
-os.loadAPI("rSettings/startMenu")
+print("RavenOS Boot Options")
+print("")
+print("Press enter to boot normally")
+print("Press F2 to boot into safe mode")
+event, key = os.pullEvent("key")
 
-term.clear()
-term.setCursorPos(1,1)
-term.setTextColor(colors.lime)
-write("Notice: ")
-term.setTextColor(colors.white)
-write("If you find any bugs or glitches please report it to the developers of RavenOS")
-sleep(2)
+if key == keys.enter then
+  os.loadAPI("rApis/check")
+  os.loadAPI("rApis/text")
+  os.loadAPI("rSettings/system")
+  os.loadAPI("rSettings/startMenu")
 
-if fs.exists("rSettings/doNotLogin") then
-  shell.run("rOS/intro")
-else
-  shell.run("rOS/login")
+  term.clear()
+  term.setCursorPos(1,1)
+  term.setTextColor(colors.lime)
+  write("Notice: ")
+  term.setTextColor(colors.white)
+  write("If you find any bugs or glitches please report it to the developers of RavenOS")
+  sleep(2)
+
+  if fs.exists("rSettings/doNotLogin") then
+    shell.run("rOS/intro")
+  else
+    shell.run("rOS/login")
+  end
+elseif key == keys.f2 then
+  term.clear()
+  term.setCursorPos(1,1)
+  print("RavenOS Safe Mode")
 end
