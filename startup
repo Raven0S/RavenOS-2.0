@@ -28,9 +28,32 @@ if key == keys.enter then
     shell.run("rOS/login")
   end
 elseif key == keys.f1 then
-  term.clear()
-  term.setCursorPos(1,1)
-  print("RavenOS Safe Mode")
+  if fs.exists("rSettings/doNotLogin") then
+    term.clear()
+    term.setCursorPos(1,1)
+    print("RavenOS Safe Mode")
+  else
+    un = fs.open("rSettings/username", "r")
+    correctUsername = un.readLine()
+    un.close()
+    ps = fs.open("rSettings/password", "r")
+    correctPassword = ps.readLine()
+    ps.close()
+    term.clear()
+    term.setCursorPos(1,1)
+    write("Username: ")
+    u = read()
+    write("Password: ")
+    p = read()
+    
+    if u == correctUsername and p == correctPassword then
+      term.clear()
+      term.setCursorPos(1,1)
+      print("RavenOS Safe Mode")
+    else 
+      os.reboot()
+    end
+  end
 else
   os.reboot()
 end
