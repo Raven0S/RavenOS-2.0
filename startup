@@ -13,6 +13,8 @@ if key == keys.enter then
   os.loadAPI("rApis/text")
   os.loadAPI("rSettings/system")
   os.loadAPI("rSettings/startMenu")
+  shell.setAlias("list", "rPrograms/list")
+  shell.setAlias("ls", "rPrograms/list")
 
   term.clear()
   term.setCursorPos(1,1)
