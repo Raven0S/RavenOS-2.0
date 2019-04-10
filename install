@@ -78,6 +78,7 @@ function installAll()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/settings", "rPrograms/settings")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/settingsLogin", "rPrograms/settingsLogin")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/settingsSystem", "rPrograms/settingsSystem")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS-2.0/master/rPrograms/list", "rPrograms/list")
   shell.run("set shell.allow_disk_startup false")
   os.reboot()
 end
