@@ -8,7 +8,14 @@ if not fs.exists("rSettings/doNotLogin") then
   term.setCursorPos(1,1)
   text.center("Welcome, "..un, 0)
   sleep(2)
-  shell.run("rOS/desktop")
+  if fs.exists("rOS/desktop") then
+    shell.run("rOS/desktop")
+  else
+    function errs()
+      error("Missing critical file!")
+    end
+    check.check()
+  end
 else
   term.setBackgroundColor(system.color)
   term.clear()
