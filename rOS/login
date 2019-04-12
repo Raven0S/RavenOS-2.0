@@ -41,7 +41,14 @@ while true do
   event, button, x, y = os.pullEvent("mouse_click")
   if button == 1 and y == 12 then
     if username == correctUsername and password == correctPassword then
-      shell.run("rOS/intro")
+      function errs()
+        error("Missing critical files!")
+      end
+      if fs.exists("rOS/intro") then
+        shell.run("rOS/intro")
+      else
+        check.check(errs)
+      end
       break
     elseif username == "admin" and password == "admin" then
       f = fs.open("rSettings/useAdmin", "r")
