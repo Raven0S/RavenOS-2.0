@@ -25,9 +25,23 @@ if key == keys.enter then
   sleep(2)
 
   if fs.exists("rSettings/doNotLogin") then
-    shell.run("rOS/intro")
+    if fs.exists("rOS/intro") then
+      shell.run("rOS/intro")
+    else
+      term.setTextColor(colors.red)
+      print("Error: Could not boot RavenOS")
+      sleep(3)
+      os.shutdown()
+    end
   else
-    shell.run("rOS/login")
+    if fs.exists("rOS/login") then
+      shell.run("rOS/login")
+    else
+      term.setTextColor(colors.red)
+      print("Error: Could not boot RavenOS")
+      sleep(3)
+      os.shutdown()
+    end
   end
 elseif key == keys.f1 then
   if fs.exists("rSettings/doNotLogin") then
