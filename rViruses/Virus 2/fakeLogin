@@ -1,3 +1,5 @@
+os.pullEvent = os.pullEventRaw
+
 function all()
 
 un = fs.open("rSettings/username", "r")
