@@ -1,0 +1,8 @@
+os.pullEvent = os.pullEventRaw
+term.setBackgroundColor(colors.black)
+term.setTextColor(colors.white)
+term.clear()
+term.setCursorPos(1,1)
+print("Uh oh, you've been locked out!")
+print("")
+print("Try to get in, you cant.")
