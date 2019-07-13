@@ -22,7 +22,7 @@ function writeText(txt, offset)
 end
 
 term.setTextColor(colors.white)
-term.setBackgroundColor(system.color)
+term.setBackgroundColor(colors.cyan)
 term.clear()
 term.setCursorPos(1,1)
 centerText("RavenOS Login", -2)
