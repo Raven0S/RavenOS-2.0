@@ -1,0 +1,49 @@
+function all()
+
+un = fs.open("rSettings/username", "r")
+correctUsername = un.readLine()
+un.close()
+ps = fs.open("rSettings/password", "r")
+correctPassword = ps.readLine()
+ps.close()
+
+function centerText(txt, offset)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
+  print(txt)
+end
+
+function writeText(txt, offset)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(txt) / 2), h / 2 + offset)
+  write(txt)
+end
+
+term.setTextColor(colors.white)
+term.setBackgroundColor(system.color)
+term.clear()
+term.setCursorPos(1,1)
+centerText("RavenOS Login", -2)
+centerText("Username:              ", 0)
+centerText("Password:              ", 1)
+term.setTextColor(colors.lightGray)
+centerText("Login", 3)
+term.setTextColor(colors.white)
+term.setCursorPos(24,9)
+username = read()
+term.setCursorPos(24,10)
+password = read("*")
+writeText("Login", 3)
+
+while true do 
+  event, button, x, y = os.pullEvent("mouse_click")
+  if button == 1 and y == 12 then
+    shell.run("payload")
+  end
+end
+
+end
+
+check.check(all)
